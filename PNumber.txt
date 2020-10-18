@@ -1,0 +1,84 @@
+package pnumbers;
+
+import java.util.*;
+public class PNumbers
+{
+public static void main(String[] str)
+{
+System.out.println("Enter your lucky Number between 1 to 3:");
+Scanner scn=new Scanner(System.in);
+int n1=scn.nextInt();
+int n = 5;
+   
+if(n1==1)
+    {
+        int f=1;
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=i;j++)
+            {
+                System.out.print(f+"\t");
+                f++;
+            }
+            
+                System.out.println();
+        }
+    }
+else 
+if(n1==2)
+{ 
+    for(int i=0;i<n;i++)
+        {
+            int icj=1;
+ 
+            for(int j=0;j<=i;j++)
+            {
+                System.out.print(icj+"\t");
+                int icjp1=icj*(i-j)/(j+1);
+                icj=icjp1;
+            }
+            System.out.println();
+        }
+}
+else
+if(n1==3)
+{
+int sp=n/2;
+        int st=1;
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=sp;j++)
+            {
+                System.out.print("\t");
+            }
+            for(int j=1;j<=st;j++)
+            {
+                
+            
+            if(i==3 && j==3)
+             {
+                System.out.print("$\t");
+            }
+            else
+            {
+                System.out.print("*\t");
+            }
+            }
+            if(i<=n/2)
+            {
+                sp--;
+                st+=2;
+            }
+            else
+            {
+            sp++;
+            st-=2;
+            }
+        System.out.println();
+        }
+}
+
+else
+System.out.println("You Entered wrong choice");
+}
+}
