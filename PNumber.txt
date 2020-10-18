@@ -8,7 +8,8 @@ public static void main(String[] str)
 System.out.println("Enter your lucky Number between 1 to 3:");
 Scanner scn=new Scanner(System.in);
 int n1=scn.nextInt();
-int n = 5;
+System.out.println("Enter your second lucky Number between 1 to 10");
+int n =scn.nextInt();
    
 if(n1==1)
     {
@@ -77,6 +78,68 @@ int sp=n/2;
         System.out.println();
         }
 }
+else
+if(n1==4)
+    {
+        int sp=n/2;
+        int st=1;
+        int val=n;
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=sp;j++)
+            {
+                System.out.print("\t");
+            }
+            for(int j=1;j<=st;j++)
+            {
+   
+                System.out.print(val+"\t");
+            }
+            if(i<=n/2)
+            {
+                sp--;
+                st+=2;
+            }
+            else
+            {
+            sp++;
+            st-=2;
+            }
+        System.out.println();
+        }
+    }
+   else
+        if(n1==5)
+        {
+            int sp=n/2;
+        int st=1;
+        int val=n;
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=sp;j++)
+            {
+                System.out.print("\t");
+            }
+            for(int j=1;j<=st;j++)
+            {
+   
+                System.out.print(val+"\t");
+            }
+            if(i<=n/2)
+            {
+                sp--;
+                st+=2;
+            }
+            else
+            {
+            sp++;
+            st-=2;
+            }
+        System.out.println();
+        val++;
+        }
+        }
+
 
 else
 System.out.println("You Entered wrong choice");
